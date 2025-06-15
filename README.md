@@ -38,7 +38,7 @@ AWS hands-on demos with Lambda, S3, and serverless pipelines. Explores cost opti
 ## python-lab
 Data wrangling, quick ML proofs-of-concept, and Python-based utility scripts.
 
-# Slides from my conferences and talks
+# My notable talks on AI and ML
 [talks-presentations](https://github.com/nobelk/talks-presentations)
 
 
