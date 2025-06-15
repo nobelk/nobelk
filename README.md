@@ -1,4 +1,4 @@
-<h1 align="center">Hi there, I’m Nobel Khandaker!</h1> <p align="center"> <em>Ex Microsoft · 10+ years Engineering · Big Data | Cloud | AI/ML | Multiagent Systems</em> </p>
+<h1 align="center">Hi there, I’m Nobel</h1> <p align="center"> <em>Ex Microsoft · 10+ years Engineering · Big Data | Cloud | AI/ML | Multiagent Systems</em> </p>
 
 ## About Me
 I’m a hands-on engineering leader with 10+ years of experience designing, building, and delivering scalable apps and data platforms in both Fortune 100 environments and fast-paced startups. My background includes:
@@ -37,7 +37,7 @@ AWS hands-on demos with Lambda, S3, and serverless pipelines. Explores cost opti
 
 ### python-lab
 Data wrangling, quick ML proofs-of-concept, and Python-based utility scripts.
-- butterfly-generator - generate random numbers using US Weather Service Data!
+- random-number-generator - very useful random number generation tool using US Weather Service Data!
 
 ## My notable talks on AI and software engineering
 [talks-presentations](https://github.com/nobelk/talks-presentations)
