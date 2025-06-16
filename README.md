@@ -3,11 +3,11 @@
 ## About Me
 I’m a hands-on engineering leader with 10+ years of experience designing, building, and delivering scalable apps and data platforms in both Fortune 100 environments and fast-paced startups. My background includes:
 
+- Architecting and implementing microservice-based cloud solutions (AWS, Azure) with microservices and event-driven designs
 - Developing and operating petabyte-scale data ingestion and processing pipelines (ETL/ELT) on AWS and Azure
-- Architecting and implementing cloud solutions (AWS, Azure) with microservices and event-driven designs
-- Driving data governance initiatives (GDPR, HIPAA) for global technology platforms
-- Leading globally distributed engineering teams to produce market-leading B2B and B2C analytics apps
 - Pioneering AI/ML solutions—from generative AI in education to production-scale ML pipelines
+- Leading globally distributed engineering teams to produce market-leading B2B and B2C analytics apps
+
 
 I’ve enjoyed leading strategy at organizations (CTO, VP Engineering, SVP roles) and shipping solutions used by millions worldwide. I was also recognized internationally for AI innovations, including a Top 20 AI Application (AAAI, USA) award.
 
@@ -22,22 +22,19 @@ I’m passionate about aligning technology with business goals, mentoring teams,
 ## Key Technical Strengths
 - AI/ML: Generative AI (LLMs, AI image generation), ML pipelines (data wrangling, model deployment), MLOps
 - Cloud & Infrastructure: AWS (Lambda, EC2, S3), Azure (AKS, Azure Data Lake), Terraform, Kubernetes, Docker, CI/CD
-Data Engineering: Hadoop/Spark, Python, SQL/NoSQL, ETL/ELT, Big Data Governance (GDPR, HIPAA)
+- Data Engineering: Spark, Python, SQL/NoSQL, ETL/ELT, Big Data Governance (GDPR, HIPAA)
 - Software Architecture: Microservices, Event-driven systems, RESTful APIs, GraphQL, Highly available distributed design
 Leadership & Management: Remote/hybrid teams, Agile methodologies, Cross-functional collaboration, Budgeting & recruiting
-Featured Repositories
 
-## Repository Highlights
+## Featured Repositories
 ### AI/ML - lab
-- RAGsearch - Personal search assistant app for LLM powered semantic search of your documents
+- RAGsearch - Personal search assistant app for LLM-powered semantic search of your documents
 
 ### Cloud Services and Distributed Systems
-AWS hands-on demos with Lambda, S3, and serverless pipelines. Explores cost optimization and security best practices.
 - pyloglog - Efficient and Optimized Cardinality Estimation of Data Streams
 - count-min-sketch - probabilistically estimate the frequency of an item/element in a stream of data.
 
 ### python-lab
-Data wrangling, quick ML proofs-of-concept, and Python-based utility scripts.
 - random-number-generator - very useful random number generation tool using US Weather Service Data!
 - correlation-logger - an useful production-grade logging tool in Python that uses salting
 
