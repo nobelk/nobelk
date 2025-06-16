@@ -12,7 +12,7 @@ I’m a hands-on engineering leader with 10+ years of experience designing, buil
 I’ve enjoyed leading strategy at organizations (CTO, VP Engineering, SVP roles) and shipping solutions used by millions worldwide. I was also recognized internationally for AI innovations, including a Top 20 AI Application (AAAI, USA) award.
 
 ## Current Focus
-- Building AI/ML solutions to real-world problems using Deep Learning, AI/ML
+- Building sclable, robust, and reliable distributed systems on the cloud
 - Building robust data engineering pipelines and scalable analytics platforms
 - Optimizing cloud infrastructure for cost, performance, and reliability
 - Exploring AI/ML integrations (LLMs, user personalization, advanced MLOps workflows)
@@ -39,6 +39,7 @@ AWS hands-on demos with Lambda, S3, and serverless pipelines. Explores cost opti
 ### python-lab
 Data wrangling, quick ML proofs-of-concept, and Python-based utility scripts.
 - random-number-generator - very useful random number generation tool using US Weather Service Data!
+- correlation-logger - an useful production-grade logging tool in Python that uses salting
 
 ## My notable talks on AI and software engineering
 [talks-presentations](https://github.com/nobelk/talks-presentations)
