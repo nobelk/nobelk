@@ -17,8 +17,6 @@ I’ve enjoyed leading strategy at organizations (CTO, VP Engineering, SVP roles
 - Optimizing cloud infrastructure for cost, performance, and reliability
 - Exploring AI/ML integrations (LLMs, user personalization, advanced MLOps workflows)
 
-I’m passionate about aligning technology with business goals, mentoring teams, and transforming ideas into impactful software systems. You can find me experimenting with Terraform for multi-cloud deployments, building Docker/Kubernetes labs for microservices, and tinkering with Python-based machine learning projects.
-
 ## Key Technical Strengths
 - AI/ML: Generative AI (LLMs, AI image generation), ML pipelines (data wrangling, model deployment), MLOps
 - Cloud & Infrastructure: AWS (Lambda, EC2, S3), Azure (AKS, Azure Data Lake), Terraform, Kubernetes, Docker, CI/CD
@@ -38,15 +36,15 @@ Leadership & Management: Remote/hybrid teams, Agile methodologies, Cross-functio
 - random-number-generator - very useful random number generation tool using US Weather Service Data!
 - correlation-logger - an useful production-grade logging tool in Python that uses salting
 
-## My notable talks on AI and software engineering
+## My talks on AI and software engineering
 [talks-presentations](https://github.com/nobelk/talks-presentations)
 
 ## Let’s Connect
 I’m always open to exploring new opportunities or brainstorming about the latest tech trends. If you’re looking for a principal or distinguished engineer with deep hands-on expertise and proven leadership, feel free to reach out.
 
-Email: nobel @ intuitai.org
-LinkedIn: linkedin.com/in/nobelkhandaker/
-blog: https://zerodowntime.dev
+- Email: nobel @ intuitai.org
+- LinkedIn: linkedin.com/in/nobelkhandaker/
+- blog: https://zerodowntime.dev
 
 Thanks for stopping by!
 
