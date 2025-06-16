@@ -35,6 +35,7 @@ Leadership & Management: Remote/hybrid teams, Agile methodologies, Cross-functio
 ### python-lab
 - random-number-generator - very useful random number generation tool using US Weather Service Data!
 - correlation-logger - an useful production-grade logging tool in Python that uses salting
+- pymake - template to create python projects using Poetry 
 
 ## My talks on AI and software engineering
 [talks-presentations](https://github.com/nobelk/talks-presentations)
