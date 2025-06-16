@@ -34,6 +34,7 @@ Featured Repositories
 ### Cloud Services and Distributed Systems
 AWS hands-on demos with Lambda, S3, and serverless pipelines. Explores cost optimization and security best practices.
 - pyloglog - Efficient and Optimized Cardinality Estimation of Data Streams
+- count-min-sketch - probabilistically estimate the frequency of an item/element in a stream of data.
 
 ### python-lab
 Data wrangling, quick ML proofs-of-concept, and Python-based utility scripts.
