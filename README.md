@@ -39,6 +39,7 @@ Leadership & Management: Remote/hybrid teams, Agile methodologies, Cross-functio
 
 ### Misc
 - heap - an efficient Min and Max Heap implementation in C#
+- filediff - finds the difference between two large sets of items
 
 ## My talks on AI and software engineering
 [talks-presentations](https://github.com/nobelk/talks-presentations)
