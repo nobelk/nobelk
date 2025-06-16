@@ -36,6 +36,7 @@ Leadership & Management: Remote/hybrid teams, Agile methodologies, Cross-functio
 - random-number-generator - very useful random number generation tool using US Weather Service Data!
 - correlation-logger - an useful production-grade logging tool in Python that uses salting
 - pymake - template to create python projects using Poetry
+- resilience4py - port of the resilience4j to Python
 
 ### Misc
 - heap - an efficient Min and Max Heap implementation in C#
