@@ -48,8 +48,8 @@ Leadership & Management: Remote/hybrid teams, Agile methodologies, Cross-functio
 ## Let’s Connect
 I’m always open to exploring new opportunities or brainstorming about the latest tech trends. If you’re looking for a principal or distinguished engineer with deep hands-on expertise and proven leadership, feel free to reach out.
 
-- Email: nobel @ intuitai.org
-- LinkedIn: linkedin.com/in/nobelkhandaker/
+- Discord: https://discordapp.com/users/nobelk
+- LinkedIn: https://linkedin.com/in/nobelkhandaker
 - blog: https://zerodowntime.dev
 
 Thanks for stopping by!
