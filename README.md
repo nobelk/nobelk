@@ -12,10 +12,11 @@ I’m a hands-on engineering leader with 10+ years of experience designing, buil
 I’ve enjoyed leading strategy at organizations (CTO, VP Engineering, SVP roles) and shipping solutions used by millions worldwide. I was also recognized internationally for AI innovations, including a Top 20 AI Application (AAAI, USA) award.
 
 ## Current Focus
+- Using AI/ML integrations (LLMs, user personalization, advanced MLOps workflows) to build novel solutions
 - Building sclable, robust, and reliable distributed systems on the cloud
 - Building robust data engineering pipelines and scalable analytics platforms
 - Optimizing cloud infrastructure for cost, performance, and reliability
-- Exploring AI/ML integrations (LLMs, user personalization, advanced MLOps workflows)
+
 
 ## Key Technical Strengths
 - AI/ML: Generative AI (LLMs, AI image generation), ML pipelines (data wrangling, model deployment), MLOps
@@ -27,6 +28,7 @@ Leadership & Management: Remote/hybrid teams, Agile methodologies, Cross-functio
 ## Featured Repositories
 ### AI/ML - lab
 - RAGsearch - Personal search assistant app for LLM-powered semantic search of your documents
+- mcp-assistant - MCP server based AI search assistant
 
 ### Cloud Services and Distributed Systems
 - pyloglog - Efficient and Optimized Cardinality Estimation of Data Streams
