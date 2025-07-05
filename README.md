@@ -29,6 +29,7 @@ Leadership & Management: Remote/hybrid teams, Agile methodologies, Cross-functio
 ### AI/ML - lab
 - RAGsearch - Personal search assistant app for LLM-powered semantic search of your documents
 - random-number-server - MCP server for generating random numbers using meteorological data
+- geodistance - MCP server for calculating geographical distance between two addresses using google map api
 
 ### Cloud Services and Distributed Systems
 - pyloglog - Efficient and Optimized Cardinality Estimation of Data Streams
