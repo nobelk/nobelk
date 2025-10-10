@@ -27,7 +27,7 @@ Leadership & Management: Remote/hybrid teams, Agile methodologies, Cross-functio
 
 ## Featured Repositories
 ### AI/ML - lab
-- RAGsearch - Personal search assistant app for LLM-powered semantic search of your documents
+- QuranLLM - OpenAI and vector database (PineconeDB) search engine for interactive searching of a book.
 - random-number-server - MCP server for generating random numbers using meteorological data
 - geodistance - MCP server for calculating geographical distance between two addresses using google map api
 
