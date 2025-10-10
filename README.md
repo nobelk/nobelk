@@ -30,6 +30,7 @@ Leadership & Management: Remote/hybrid teams, Agile methodologies, Cross-functio
 - QuranLLM - OpenAI and vector database (PineconeDB) search engine for interactive searching of a book.
 - random-number-server - MCP server for generating random numbers using meteorological data
 - geodistance - MCP server for calculating geographical distance between two addresses using google map api
+- claude-commands - Collections of useful Claude commands for coding, testing, and peer-reviewing, and analysing code.
 
 ### Cloud Services and Distributed Systems
 - pyloglog - Efficient and Optimized Cardinality Estimation of Data Streams
