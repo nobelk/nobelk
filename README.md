@@ -10,12 +10,10 @@
 
 ---
 
-## 🎯 Currently Seeking: Lead Software Engineer / Engineering Manager
-**Focus**: AI/Agentic Systems, ML Platforms, Distributed Systems
-
 I'm an engineering leader with **12+ years** building production AI/ML systems, data platforms, and distributed applications at **Microsoft** and high-growth startups. I combine **PhD-level research** in Multiagent Systems with hands-on experience shipping products used by **10M+ users**.
 
 ### 💼 Recent Leadership Impact
+- 🏗️ **Led Application Platform engineering team** Designing backend service and frontend human-in-the-loop (HITL) app for autonomous rail
 - 🏗️ **Led 12-person engineering team** building ML-powered operational analytics platform (10M+ utility users, $XX M cost savings)
 - 🚀 **Founding CTO**: Built engineering org from 0→12, shipped Global Top 20 NFT platform (1M+ users, $1M+ on-chain transactions)
 - 📊 **Architected terabyte-scale data platform** on AWS achieving 99.9% uptime with 15% infrastructure cost reduction
@@ -26,6 +24,22 @@ I'm an engineering leader with **12+ years** building production AI/ML systems, 
 **Cloud Architecture**: AWS (Lambda, EC2, EKS, Redshift), Azure, Microservices, Event-Driven Design, 99.9% SLA  
 **Data Platforms**: Spark, Kafka, ETL/ELT Pipelines, Terabyte-Scale Processing, Real-Time Analytics  
 **Leadership**: Team Building (0→12), Cross-Functional Collaboration, Hiring, Agile, Remote Teams
+
+---
+
+### 📖 [RAGsearch](https://github.com/nobelk/RAGsearch) - Production RAG and LLM Powered Search Tool
+> Semantic search engine combining Ollama and Qdrant
+
+**What it does**: Interactive RAG-powered search using Qdrant and Ollama  
+**Tech Stack**: Python, Ollama, Qdrant, FastAPI  
+**Why it matters**: Real-world RAG implementation with production-ready architecture
+
+**Highlights**:
+- ✅ Hybrid search (semantic + keyword)
+- ✅ Multi-turn conversational interface
+- ✅ Basic adversarial search prevention
+- ✅ Citation and source tracking
+- ✅ Optimized chunking strategy
 
 ---
 
