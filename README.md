@@ -20,12 +20,15 @@ I'm an engineering leader with **12+ years** building production AI/ML systems, 
 - 🤖 **Shipped production agentic systems**: Autonomous tutor, self-serving analytics agent, AI knowledge assistant
 
 ### 🧠 Core Expertise
+**Distributed Systems**: Design and development of fault-tolerant, available, reliable distributed backend services for on-prem and cloud systems
 **AI/ML Engineering**: Generative AI (LLMs, GPT-4, Claude), ML Pipelines, MLOps, Agentic Systems, RAG, Vector Databases  
 **Cloud Architecture**: AWS (Lambda, EC2, EKS, Redshift), Azure, Microservices, Event-Driven Design, 99.9% SLA  
 **Data Platforms**: Spark, Kafka, ETL/ELT Pipelines, Terabyte-Scale Processing, Real-Time Analytics  
 **Leadership**: Team Building (0→12), Cross-Functional Collaboration, Hiring, Agile, Remote Teams
 
 ---
+
+## 🚀 Featured Projects
 
 ### 📖 [RAGsearch](https://github.com/nobelk/RAGsearch) - Production RAG and LLM Powered Search Tool
 > Semantic search engine combining Ollama and Qdrant
@@ -42,8 +45,6 @@ I'm an engineering leader with **12+ years** building production AI/ML systems, 
 - ✅ Optimized chunking strategy
 
 ---
-
-## 🚀 Featured Projects
 
 ### 🎭 [Artemis](https://github.com/nobelk/Artemis) - LLM-Powered Multiagent Simulation Framework
 > Production-grade framework for orchestrating collaborative AI agents with emergent behaviors
