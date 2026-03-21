@@ -1,164 +1,101 @@
 # Nobel Khandaker, PhD
-### Engineering Leader | AI/Agentic Systems | Cloud & Data Platforms
 
-<p align="center">
-  <a href="https://linkedin.com/in/nobelkhandaker"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
-  <a href="https://zerodowntime.dev"><img src="https://img.shields.io/badge/Blog-FF5722?style=for-the-badge&logo=blogger&logoColor=white" /></a>
-  <a href="mailto:nobel@outlook.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" /></a>
-  <a href="https://discordapp.com/users/nobelk"><img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" /></a>
-</p>
+**Engineering Leader | AI Agents & Distributed Systems | 12+ Years at Microsoft + Startups**
 
----
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/nobelkhandaker)
+[![Blog](https://img.shields.io/badge/Blog-FF5722?style=flat&logo=blogger&logoColor=white)](https://zerodowntime.dev)
+[![Email](https://img.shields.io/badge/Email-D14836?style=flat&logo=gmail&logoColor=white)](mailto:nobel@outlook.com)
 
-I'm an engineering leader with **12+ years** building production AI/ML systems, data platforms, and distributed applications at **Microsoft** and high-growth startups. I combine **PhD-level research** in Multiagent Systems with hands-on experience shipping products used by **10M+ users**.
+I build production AI systems at scale. My work spans multiagent orchestration, LLM infrastructure, and distributed data platforms — from PhD research in multiagent systems (AAAI, AAMAS) to shipping ML-powered products for 10M+ users at Microsoft and startups. I've built engineering teams from zero, led terabyte-scale data platform architecture, and shipped production agentic systems including autonomous tutoring agents and AI knowledge assistants.
 
-### 💼 Recent Leadership Impact
-- 🏗️ **Led Application Platform engineering team** Designing backend service and frontend human-in-the-loop (HITL) app for autonomous rail
-- 🏗️ **Led 12-person engineering team** building ML-powered operational analytics platform (10M+ utility users, $XX M cost savings)
-- 🚀 **Founding CTO**: Built engineering org from 0→12, shipped Global Top 20 NFT platform (1M+ users, $1M+ on-chain transactions)
-- 📊 **Architected terabyte-scale data platform** on AWS achieving 99.9% uptime with 15% infrastructure cost reduction
-- 🤖 **Shipped production agentic systems**: Autonomous tutor, self-serving analytics agent, AI knowledge assistant
-
-### 🧠 Core Expertise
-**Distributed Systems**: Design and development of fault-tolerant, available, reliable distributed backend services for on-prem and cloud systems
-**AI/ML Engineering**: Generative AI (LLMs, GPT-4, Claude), ML Pipelines, MLOps, Agentic Systems, RAG, Vector Databases  
-**Cloud Architecture**: AWS (Lambda, EC2, EKS, Redshift), Azure, Microservices, Event-Driven Design, 99.9% SLA  
-**Data Platforms**: Spark, Kafka, ETL/ELT Pipelines, Terabyte-Scale Processing, Real-Time Analytics  
-**Leadership**: Team Building (0→12), Cross-Functional Collaboration, Hiring, Agile, Remote Teams
+Currently exploring **Engineering Manager** roles at frontier AI companies.
 
 ---
 
-## 🚀 Featured Projects
+## Featured projects
 
-### 📖 [RAGsearch](https://github.com/nobelk/RAGsearch) - Production RAG and LLM Powered Search Tool
-> Semantic search engine combining Ollama and Qdrant
+### [Tangle](https://github.com/intuitai/tangle) — Agent workflow deadlock & livelock detection <sub>via [intuitai](https://github.com/intuitai)</sub>
 
-**What it does**: Interactive RAG-powered search using Qdrant and Ollama  
-**Tech Stack**: Python, Ollama, Qdrant, FastAPI  
-**Why it matters**: Real-world RAG implementation with production-ready architecture
+Deadlock and livelock detection for multi-agent AI workflows. Monitors agent interactions in real time, detects when agents are stuck (deadlocks via Wait-For Graph cycle detection) or looping without progress (livelocks via ring-buffer pattern matching), and triggers configurable resolution actions.
 
-**Highlights**:
-- ✅ Hybrid search (semantic + keyword)
-- ✅ Multi-turn conversational interface
-- ✅ Basic adversarial search prevention
-- ✅ Citation and source tracking
-- ✅ Optimized chunking strategy
+- Native LangGraph integration with `@tangle_node` and `@tangle_conditional_edge` decorators
+- Incremental DFS cycle detection + periodic Kahn's algorithm full scans
+- Configurable resolver chain: alert, cancel, tiebreaker prompt injection, webhook escalation
+- FastAPI sidecar with REST API + OpenTelemetry OTLP span parsing
+- 210 tests across 16 test files with Hypothesis property tests
 
----
+**Stack:** Python, LangGraph, FastAPI, Pydantic, xxhash, SQLite, OpenTelemetry
 
-### 🎭 [Artemis](https://github.com/nobelk/Artemis) - LLM-Powered Multiagent Simulation Framework
-> Production-grade framework for orchestrating collaborative AI agents with emergent behaviors
+### [Reverb](https://github.com/intuitai/reverb) — Semantic response cache with knowledge-aware invalidation <sub>via [intuitai](https://github.com/intuitai)</sub>
 
-**What it does**: Enables multiple LLM agents to collaborate on complex tasks through structured communication protocols  
-**Tech Stack**: Python, LangChain, OpenAI API, AsyncIO  
-**Why it matters**: Demonstrates PhD research → production translation in cutting-edge agentic AI
+A two-tier semantic response cache for LLM applications. Reduces redundant LLM calls by caching both exact (SHA-256, sub-ms) and semantically similar queries (embedding cosine, ~50ms), with automatic invalidation when underlying knowledge base documents change.
 
-**Key Features**:
-- 🧩 Modular agent architecture with pluggable LLM backends
-- 💬 Inter-agent communication with message passing
-- 📊 Performance metrics and observability
-- 🔄 State management for multi-turn agent interactions
+- Two-tier lookup: exact hash match → semantic similarity with configurable threshold
+- Knowledge-aware invalidation: tracks source document lineage, CDC listeners for change detection
+- Pluggable backends: embedding providers (OpenAI, Ollama), vector indices (flat, HNSW), persistence stores
+- Standalone HTTP server with REST API, Docker support, and multi-stage builds
+- 155 unit tests + 11 integration tests + 2 conformance suites, all race-free
 
-**Status**: 🚧 Active Development | [Roadmap](#) | [Docs](#)
+**Stack:** Go, HNSW, SHA-256, cosine similarity, Docker, REST API
 
----
+### [Artemis](https://github.com/nobelk/Artemis) — LLM-powered multiagent simulation framework
 
-### 📖 [QuranLLM](https://github.com/nobelk/QuranLLM) - Production RAG System
-> Semantic search engine combining OpenAI embeddings + Pinecone vector DB
+Production-grade framework for orchestrating collaborative AI agents with emergent behaviors. Translates PhD research in multiagent systems into modern LLM-powered agent architectures.
 
-**What it does**: Interactive search and Q&A over religious texts using retrieval-augmented generation  
-**Tech Stack**: Python, OpenAI Embeddings, Pinecone, FastAPI  
-**Why it matters**: Real-world RAG implementation with production-ready architecture
+- Modular agent architecture with pluggable LLM backends
+- Inter-agent communication with message passing
+- Performance metrics, observability, and state management for multi-turn interactions
 
-**Highlights**:
-- ✅ Hybrid search (semantic + keyword)
-- ✅ Multi-turn conversational interface
-- ✅ Citation and source tracking
-- ✅ Optimized chunking strategy
+**Stack:** Python, LangChain, OpenAI API, AsyncIO
+
+### [RAGsearch](https://github.com/nobelk/RAGsearch) — Production RAG search engine
+
+Semantic search engine with hybrid retrieval combining dense embeddings and keyword search, multi-turn conversational interface, citation tracking, and basic adversarial query prevention.
+
+**Stack:** Python, Ollama, Qdrant, FastAPI
 
 ---
 
-### 🛡️ [Resilience4py](https://github.com/nobelk/resilience4py) - Fault Tolerance Library
-> Python port of Resilience4j with circuit breaker, retry, rate limiting patterns
+## Infrastructure & systems libraries
 
-**What it does**: Production-grade reliability patterns for distributed systems  
-**Tech Stack**: Python, AsyncIO, Type Hints, Pytest  
-**Why it matters**: Shows understanding of production system reliability (⭐️ directly applicable to AI agent systems)
-
-**Coverage**: Circuit Breaker • Retry • Rate Limiter • Bulkhead • 44% Test Coverage
-
----
-
-### 🔌 MCP Servers for Claude
-Building Model Context Protocol servers to extend AI capabilities:
-- **[geodistance](https://github.com/nobelk/geodistance)** - Geographic distance calculations via Google Maps API
-- **[random-number-server](https://github.com/nobelk/random-number-server)** - Random number generation using meteorological data
+| Project | Description | Language |
+|---------|-------------|----------|
+| [Resilience4py](https://github.com/nobelk/resilience4py) | Fault-tolerance patterns for distributed systems: circuit breaker, retry, rate limiter, bulkhead | Python |
+| [geodistance](https://github.com/nobelk/geodistance) | MCP server for geographic distance calculations via Google Maps API | Python |
+| [random-number-server](https://github.com/nobelk/random-number-server) | MCP server for random number generation using meteorological data | Python |
+| [pyloglog](https://github.com/nobelk/pyloglog) | LogLog cardinality estimation | Python |
+| [count-min-sketch](https://github.com/nobelk/count-min-sketch) | Probabilistic frequency estimation data structure | Python |
+| [correlation-logger](https://github.com/nobelk/correlation-logger) | Production logging with request correlation | Python |
 
 ---
 
-### 📊 Data Engineering Utilities
-Production-grade streaming data structures:
-- **[pyloglog](https://github.com/nobelk/pyloglog)** - HyperLogLog for cardinality estimation
-- **[count-min-sketch](https://github.com/nobelk/count-min-sketch)** - Probabilistic frequency estimation
-- **[correlation-logger](https://github.com/nobelk/correlation-logger)** - Production logging with request correlation
+## What I bring
+
+**AI/ML systems:** LLM agents (GPT-4, Claude), RAG pipelines, multiagent orchestration, ML model serving, vector databases, MCP servers
+
+**Platform engineering:** Distributed systems, Spark/Databricks at terabyte scale, event-driven architecture, 99.9% SLA systems, AWS (Lambda, EC2, EKS, Bedrock), GCP
+
+**Leadership:** Built teams from 0→12 engineers, CTO and VP-level roles, cross-functional product partnerships, hiring and mentorship, Agile at scale
+
+**Languages:** Python, Go, C#, TypeScript, Java, SQL
 
 ---
 
-## 📝 Technical Writing
-I write about engineering leadership, AI/ML systems, and production best practices at [zerodowntime.dev](https://zerodowntime.dev):
+## Research & publications
 
-*Coming Soon*:
-- "From Research to Production: Building Multiagent Systems at Scale"
-- "Cost Optimization Strategies for LLM-Powered Applications"
-- "Architecting Fault-Tolerant Agentic Systems"
+**PhD, Computer Science** — University of Nebraska–Lincoln (AI, Multiagent Systems, Distributed Systems)
 
----
-
-## 🎓 Background
-**PhD in Computer Science** (Multiagent Systems) - University of Nebraska-Lincoln  
-**Publications**: AAAI, AAMAS, IEEE Transactions on Cybernetics  
-**Awards**: Top 20 AI Applications (AAAI), Othmer Fellowship
+- *A Wiki with Multiagent Tracking, Modeling, and Coalition Formation* — **AAAI 2010** (Top 20 AI Applications)
+- *Forming and Scaffolding Human Coalitions with a Multi-Agent Framework* — **AAMAS 2007**
+- *A Simulation Tool for Computer Supported Collaborative Learning* — **IEEE Transactions on Systems, Man, and Cybernetics-C (2010)**
+- **Othmer Fellowship** recipient
 
 ---
 
-## 📈 Career Snapshot
-- 🏢 **NISC** - Engineering Team Lead, Operational Analytics (2024-Present)
-- 👔 **LiquidX Studio** - Chief Technology Officer (2022-2024)
-- 💼 **Shohoz** - VP of Technology (2019-2021)
-- 💻 **Microsoft** - Senior SDE, Office 365 Data Loss Prevention (2013-2019)
+## Let's connect
 
----
+I'm exploring **Engineering Manager** and **Staff Engineer** roles in AI/LLM infrastructure at frontier AI companies.
 
-## 🤝 Let's Connect
-I'm actively exploring **Lead Engineer** and **Engineering Manager** roles in AI/Agentic Systems.
+Interested in: multiagent systems, LLM agent architectures, production AI infrastructure, AI safety and evaluation, engineering leadership at scale.
 
-**Open to**:
-- Technical Architecture & System Design discussions
-- Multiagent Systems & LLM Agent architectures
-- Engineering leadership opportunities (team building, mentorship)
-- Speaking engagements on AI/ML production systems
-
-📧 **Email**: nobel@outlook.com  
-💼 **LinkedIn**: [linkedin.com/in/nobelkhandaker](https://linkedin.com/in/nobelkhandaker)  
-📝 **Blog**: [zerodowntime.dev](https://zerodowntime.dev)
-
----
-
-<p align="center">
-  <i>"Designing the future, one distributed system and AI agent at a time."</i>
-</p>
-
----
-
-## 📊 GitHub Stats
-
-![Nobel's GitHub stats](https://github-readme-stats.vercel.app/api?username=nobelk&show_icons=true&theme=radical)
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=nobelk&layout=compact&theme=radical)
-
----
-
-### 🔍 Currently Working On
-- 🚀 Expanding Artemis with advanced agent coordination patterns
-- 📚 Building production-grade RAG frameworks
-- 🛠️ Creating engineering leadership resources
-- ✍️ Technical blog series on agentic AI systems
+📧 [nobel@outlook.com](mailto:nobel@outlook.com) · 💼 [LinkedIn](https://linkedin.com/in/nobelkhandaker) · 📝 [zerodowntime.dev](https://zerodowntime.dev)
