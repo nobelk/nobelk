@@ -38,16 +38,6 @@ A two-tier semantic response cache for LLM applications. Reduces redundant LLM c
 
 **Stack:** Go, HNSW, SHA-256, cosine similarity, Docker, REST API
 
-### [Artemis](https://github.com/nobelk/Artemis) — LLM-powered multiagent simulation framework
-
-Production-grade framework for orchestrating collaborative AI agents with emergent behaviors. Translates PhD research in multiagent systems into modern LLM-powered agent architectures.
-
-- Modular agent architecture with pluggable LLM backends
-- Inter-agent communication with message passing
-- Performance metrics, observability, and state management for multi-turn interactions
-
-**Stack:** Python, LangChain, OpenAI API, AsyncIO
-
 ### [RAGsearch](https://github.com/nobelk/RAGsearch) — Production RAG search engine
 
 Semantic search engine with hybrid retrieval combining dense embeddings and keyword search, multi-turn conversational interface, citation tracking, and basic adversarial query prevention.
