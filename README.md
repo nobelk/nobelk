@@ -6,7 +6,7 @@
 [![Blog](https://img.shields.io/badge/Blog-FF5722?style=flat&logo=blogger&logoColor=white)](https://zerodowntime.dev)
 [![Email](https://img.shields.io/badge/Email-D14836?style=flat&logo=gmail&logoColor=white)](mailto:nobel@outlook.com)
 
-I build production AI systems at scale. My work spans multiagent orchestration, LLM infrastructure, and distributed data platforms — from PhD research in multiagent systems (AAAI, AAMAS) to shipping ML-powered products for 10M+ users at Microsoft and startups. I've built engineering teams from zero, led terabyte-scale data platform architecture, and shipped production agentic systems including autonomous tutoring agents and AI knowledge assistants.
+I build production distributed systems at scale. My work spans multiagent orchestration, LLM infrastructure, and distributed data platforms — from PhD research in multiagent systems (AAAI, AAMAS) to shipping ML-powered products for 10M+ users at Microsoft and startups. I've built engineering teams from zero, led terabyte-scale data platform architecture, and shipped production agentic systems including autonomous tutoring agents and AI knowledge assistants.
 
 Currently exploring **Engineering Manager** roles at frontier AI companies.
 
