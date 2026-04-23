@@ -1,91 +1,61 @@
-# Nobel Khandaker, PhD
+# Dr. Nobel Khandaker
 
-**Engineering Leader | AI Agents & Distributed Systems | 12+ Years at Microsoft + Startups**
+[![Blog](https://img.shields.io/badge/Blog-zerodowntime.dev-111827?style=flat-square&logo=jekyll&logoColor=white)](https://zerodowntime.dev)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-nobelkhandaker-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/nobelkhandaker)
+[![RSS](https://img.shields.io/badge/RSS-Zero%20Downtime-EA580C?style=flat-square&logo=rss&logoColor=white)](https://zerodowntime.dev/feed.xml)
+[![Distributed Systems](https://img.shields.io/badge/Distributed%20Systems-0F766E?style=flat-square)](#featured-work)
+[![Multi-Agent Systems](https://img.shields.io/badge/Multi--Agent%20Systems-7C3AED?style=flat-square)](#featured-work)
+[![MCP](https://img.shields.io/badge/MCP-0891B2?style=flat-square)](#featured-work)
+[![OpenTelemetry](https://img.shields.io/badge/OpenTelemetry-F97316?style=flat-square)](#featured-work)
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/nobelkhandaker)
-[![Blog](https://img.shields.io/badge/Blog-FF5722?style=flat&logo=blogger&logoColor=white)](https://zerodowntime.dev)
-[![Email](https://img.shields.io/badge/Email-D14836?style=flat&logo=gmail&logoColor=white)](mailto:nobel@outlook.com)
+**Lead software engineer specializing in distributed systems, multi-agent runtimes, and production reliability.**
 
-I build production distributed systems at scale. My work spans multiagent orchestration, LLM infrastructure, and distributed data platforms — from PhD research in multiagent systems (AAAI, AAMAS) to shipping ML-powered products for 10M+ users at Microsoft and startups. I've built engineering teams from zero, led terabyte-scale data platform architecture, and shipped production agentic systems including autonomous tutoring agents and AI knowledge assistants.
+I lead the design and delivery of systems that make agent workflows behave less like demos and more like real distributed systems: observable, failure-aware, and recoverable under load. My work applies classical ideas from distributed computing to the failure modes that reappear in agent infrastructure: wait-for graphs for liveness, change-data-capture for cache correctness, Subjective Logic for trust-aware coordination, and MCP/OpenTelemetry integrations that make those ideas usable in production.
 
-Currently exploring **Engineering Manager** roles at frontier AI companies.
+I care about runtime properties that usually get hand-waved away in agent demos: **liveness, freshness, trust, backpressure, observability, and operator control**.
 
----
+## Featured Work
 
-## Featured projects
+### [Tangle](https://github.com/nobelk/tangle)
+**Deadlock and livelock detection for multi-agent workflows**
 
-### [Tangle](https://github.com/intuitai/tangle) — Agent workflow deadlock & livelock detection <sub>via [intuitai](https://github.com/intuitai)</sub>
+Tangle ports textbook liveness analysis into agent runtimes. It maintains a wait-for graph, detects deadlocks with incremental DFS on edge-add plus periodic full scans via Kahn's algorithm, and flags livelocks by matching repeated message digests in a ring buffer. It ships as a Python SDK, LangGraph integration, and FastAPI sidecar, with resolver chains that turn detections into recovery actions instead of passive alerts.
 
-Deadlock and livelock detection for multi-agent AI workflows. Monitors agent interactions in real time, detects when agents are stuck (deadlocks via Wait-For Graph cycle detection) or looping without progress (livelocks via ring-buffer pattern matching), and triggers configurable resolution actions.
+`Python` `LangGraph` `OpenTelemetry` `FastAPI` `98% coverage`
 
-- Native LangGraph integration with `@tangle_node` and `@tangle_conditional_edge` decorators
-- Incremental DFS cycle detection + periodic Kahn's algorithm full scans
-- Configurable resolver chain: alert, cancel, tiebreaker prompt injection, webhook escalation
-- FastAPI sidecar with REST API + OpenTelemetry OTLP span parsing
-- 210 tests across 16 test files with Hypothesis property tests
+### [Reverb](https://github.com/nobelk/reverb)
+**Semantic response cache with knowledge-aware invalidation**
 
-**Stack:** Python, LangGraph, FastAPI, Pydantic, xxhash, SQLite, OpenTelemetry
+Reverb is a Go library and HTTP/gRPC service for caching LLM responses without pretending TTLs solve correctness. It uses a two-tier cache for exact and semantic matches, tracks source lineage for every cached response, and invalidates entries by causality when underlying knowledge changes via webhook or NATS CDC. The result is faster systems that do not quietly serve stale answers after the source of truth has moved.
 
-### [Reverb](https://github.com/intuitai/reverb) — Semantic response cache with knowledge-aware invalidation <sub>via [intuitai](https://github.com/intuitai)</sub>
+`Go` `gRPC` `HTTP` `NATS` `Redis` `BadgerDB`
 
-A two-tier semantic response cache for LLM applications. Reduces redundant LLM calls by caching both exact (SHA-256, sub-ms) and semantically similar queries (embedding cosine, ~50ms), with automatic invalidation when underlying knowledge base documents change.
+### [MultiTrust](https://github.com/nobelk/multitrust)
+**Trust runtime for multi-agent systems based on Subjective Logic**
 
-- Two-tier lookup: exact hash match → semantic similarity with configurable threshold
-- Knowledge-aware invalidation: tracks source document lineage, CDC listeners for change detection
-- Pluggable backends: embedding providers (OpenAI, Ollama), vector indices (flat, HNSW), persistence stores
-- Standalone HTTP server with REST API, Docker support, and multi-stage builds
-- 155 unit tests + 11 integration tests + 2 conformance suites, all race-free
+MultiTrust models trust as an opinion triple of belief, disbelief, and uncertainty instead of collapsing everything into a single score. That gives downstream systems a better basis for routing, weighting, gating, and explanation. It ships as an SDK and MCP-capable trust layer, with integrations for LangGraph and OpenAI Agents, plus evidence ledgers and explainability primitives that make trust decisions auditable.
 
-**Stack:** Go, HNSW, SHA-256, cosine similarity, Docker, REST API
+`Python` `MCP` `Subjective Logic` `LangGraph` `OpenAI Agents`
 
-### [RAGsearch](https://github.com/nobelk/RAGsearch) — Production RAG search engine
+These projects share the same thesis: many "new" agent problems are old distributed systems problems with new names. The leverage comes from recognizing the isomorphism early and implementing the right runtime abstractions.
 
-Semantic search engine with hybrid retrieval combining dense embeddings and keyword search, multi-turn conversational interface, citation tracking, and basic adversarial query prevention.
+## Engineering Lens
 
-**Stack:** Python, Ollama, Qdrant, FastAPI
+- I design for failure first: stuck workflows, stale data, degraded agents, partial outages, and silent correctness drift.
+- I prefer explicit runtime contracts over prompt folklore: typed events, deterministic invalidation paths, trust thresholds, resolver policies, and operator-visible telemetry.
+- I treat observability and recovery as product features, not afterthoughts.
 
----
+## Writing
 
-## Infrastructure & systems libraries
+I write at [**Zero Downtime**](https://zerodowntime.dev): notes on building reliable distributed systems with multiagents.
 
-| Project | Description | Language |
-|---------|-------------|----------|
-| [Resilience4py](https://github.com/nobelk/resilience4py) | Fault-tolerance patterns for distributed systems: circuit breaker, retry, rate limiter, bulkhead | Python |
-| [geodistance](https://github.com/nobelk/geodistance) | MCP server for geographic distance calculations via Google Maps API | Python |
-| [random-number-server](https://github.com/nobelk/random-number-server) | MCP server for random number generation using meteorological data | Python |
-| [pyloglog](https://github.com/nobelk/pyloglog) | LogLog cardinality estimation | Python |
-| [count-min-sketch](https://github.com/nobelk/count-min-sketch) | Probabilistic frequency estimation data structure | Python |
-| [correlation-logger](https://github.com/nobelk/correlation-logger) | Production logging with request correlation | Python |
+- [**Tangle: Deadlock and Livelock Detection for LangGraph Agents**](https://zerodowntime.dev/2026/04/22/tangle-deadlock-detection-for-langgraph.html) - Applying wait-for graphs and liveness monitoring to agent workflows.
+- [**MultiTrust: Subjective Logic as a Runtime for Multi-Agent Trust**](https://zerodowntime.dev/2026/04/22/multitrust-subjective-logic-for-multi-agent-systems.html) - Why scalar trust scores lose the distinction between evidence and uncertainty.
+- [**Reverb: A Semantic Cache That Knows When Its Answers Go Stale**](https://zerodowntime.dev/2026/04/22/reverb-semantic-cache-with-knowledge-aware-invalidation.html) - Using source lineage and CDC to invalidate cached answers by causality.
+- [**Taming a Legacy Codebase with Claude: A Field Report on Refactoring, Race Conditions, and Technical Debt**](https://zerodowntime.dev/2026/04/22/taming-legacy-codebase-with-claude.html) - Practical notes on hardening production systems without stopping delivery.
 
----
+## Elsewhere
 
-## What I bring
-
-**AI/ML systems:** LLM agents (GPT-4, Claude), RAG pipelines, multiagent orchestration, ML model serving, vector databases, MCP servers
-
-**Platform engineering:** Distributed systems, Spark/Databricks at terabyte scale, event-driven architecture, 99.9% SLA systems, AWS (Lambda, EC2, EKS, Bedrock), GCP
-
-**Leadership:** Built teams from 0→12 engineers, CTO and VP-level roles, cross-functional product partnerships, hiring and mentorship, Agile at scale
-
-**Languages:** Python, Go, C#, TypeScript, Java, SQL
-
----
-
-## Research & publications
-
-**PhD, Computer Science** — University of Nebraska–Lincoln (AI, Multiagent Systems, Distributed Systems)
-
-- *A Wiki with Multiagent Tracking, Modeling, and Coalition Formation* — **AAAI 2010** (Top 20 AI Applications)
-- *Forming and Scaffolding Human Coalitions with a Multi-Agent Framework* — **AAMAS 2007**
-- *A Simulation Tool for Computer Supported Collaborative Learning* — **IEEE Transactions on Systems, Man, and Cybernetics-C (2010)**
-- **Othmer Fellowship** recipient
-
----
-
-## Let's connect
-
-I'm exploring **Engineering Manager** and **Staff Engineer** roles in AI/LLM infrastructure at frontier AI companies.
-
-Interested in: multiagent systems, LLM agent architectures, production AI infrastructure, AI safety and evaluation, engineering leadership at scale.
-
-📧 [nobel@outlook.com](mailto:nobel@outlook.com) · 💼 [LinkedIn](https://linkedin.com/in/nobelkhandaker) · 📝 [zerodowntime.dev](https://zerodowntime.dev)
+- [LinkedIn](https://linkedin.com/in/nobelkhandaker)
+- [GitHub](https://github.com/nobelk)
+- [RSS](https://zerodowntime.dev/feed.xml)
