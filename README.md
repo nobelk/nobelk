@@ -12,13 +12,31 @@
 [![MCP](https://img.shields.io/badge/MCP-0891B2?style=flat-square)](#featured-work)
 [![OpenTelemetry](https://img.shields.io/badge/OpenTelemetry-F97316?style=flat-square)](#featured-work)
 
+> Reach me at **nobel.khandaker@gmail.com**.
+
 **I design and deliver distributed systems where correctness, liveness, and observability are contractual — and I build the runtimes that enforce them.**
 
-I am a Lead Software Engineer at [Intramotev](https://www.intramotev.com), building safety-critical services for autonomous battery-electric rail vehicles with a small engineering team — systems where fault tolerance is a requirement, not a preference. Outside of work, I build and write about the runtime infrastructure I want to exist.
+I am a Lead Software Engineer at [Intramotev](https://www.intramotev.com), working on safety-critical services for autonomous battery-electric freight rail — systems where fault tolerance is a requirement, not a preference. I designed and built our site coordination service in Go as its sole author, against a roadmap scoped for a team of two to three engineers, and authored its architecture. I also led software-stack stabilization — excluding hardware and the controller application — behind our 2026 production deployments at two industrial rail customers. Outside of work, I build and write about the runtime infrastructure I want to exist.
 
 That work spans two threads that reinforce each other. The first applies classical distributed-systems theory to the failure modes reappearing in agent infrastructure: wait-for graphs for liveness, change-data-capture for cache correctness, Subjective Logic for trust-aware coordination, and OpenTelemetry and MCP integrations designed for production constraints. The second builds concurrency infrastructure — most recently a parallel discrete-event simulation engine designed from first principles for free-threaded Python.
 
 Across both, I hold the same bar: architecture chosen for its failure properties, parallelism derived from structure rather than locks, and correctness demonstrated by deterministic tests. The runtime properties I care about most are the ones that matter when systems meet real load: **liveness, freshness, trust, determinism, backpressure, and operator control**.
+
+## Selected Experience
+
+| | |
+|---|---|
+| **Intramotev** | Lead Software Engineer — safety-critical coordination services for autonomous rail · 2026– |
+| **NISC** | Engineering Team Lead, Operational Analytics — terabyte-scale utility analytics, ML outage prediction · 2024–2026 |
+| **LiquidX Studio** | Founding CTO — 12 engineers, multi-region HA infrastructure for 1M+ users · 2022–2024 |
+| **Shohoz** | VP of Technology — ride-share and delivery backends, 10M+ users at 99.9% availability · 2019–2021 |
+| **Microsoft** | Senior SDE → SDE II → SDET — Office 365 compliance, DLP, and classification at 10M+ user scale · 2011–2019 |
+
+PhD in Computer Science (Multiagent Systems), University of Nebraska–Lincoln · publications at AAAI and AAMAS · Top 20 AI Applications, AAAI (2010).
+
+## How I Build
+
+Spec first, then gates, then code. On the coordination service that means a C4 architecture with the rejected alternatives written down, an architecture decision register of roughly 75 entries with an explicit proposed → accepted → validated lifecycle, hexagonal layering enforced in CI by `go-arch-lint`, mutation testing on the safety paths via `go-mutesting`, deterministic seeded full-stack simulation, and one correlation ID carried end to end per command. Much of the implementation is AI-assisted. The acceptance gates that decide whether an implementation is correct are the part I own, and designing those gates well is what makes the assistance worth using.
 
 ## Featured Work
 
@@ -26,7 +44,7 @@ Across both, I hold the same bar: architecture chosen for its failure properties
 
 **Parallel discrete-event simulation for the Python 3.14 concurrency era**
 
-llmsim keeps the generator-as-process model popularized by SimPy and rebuilds everything else for free-threaded Python: a clean-break, fully typed, `__slots__`-based sequential core with three tiers of parallelism — parallel Monte Carlo replications across cores, conservative PDES with a barrier safe-window protocol and model-provided lookahead, and in-run compute offload — plus a fourth tier of reproducibility guarantees spanning all of them: same seed, same result, on every backend. Parallelism comes from share-nothing architecture with explicit, narrow communication points, never from locks bolted onto a sequential engine, and the design targets LLM- and agent-driven workloads among its first-class use cases. Full documentation lives at [outloop.blog/llmsim](https://outloop.blog/llmsim/).
+llmsim keeps the generator-as-process model popularized by SimPy and rebuilds everything else for free-threaded Python: a clean-break, fully typed, `__slots__`-based sequential core with three tiers of parallelism — parallel Monte Carlo replications across cores, conservative PDES with a barrier safe-window protocol and model-provided lookahead, and in-run compute offload — plus reproducibility guarantees spanning all of them: same seed, same result, on every backend. Replication throughput scales across cores; single-run pure-Python event loops were measured anti-scaling across threads on CPython 3.14.2t, so the speedup ceiling is interpreter-dependent and `pdes.analyze()` estimates yours before you invest. Parallelism comes from share-nothing architecture with explicit, narrow communication points, never from locks bolted onto a sequential engine, and the design targets LLM- and agent-driven workloads among its first-class use cases. Full documentation lives at [outloop.blog/llmsim](https://outloop.blog/llmsim/).
 
 `Python 3.14` `free-threading` `subinterpreters` `PDES` `deterministic parallelism`
 
